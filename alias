@@ -1,0 +1,15 @@
+PLATFORM=`uname -s`
+
+# override for common commands
+if [ $PLATFORM "==" "Linux" ]; then
+	alias ls="ls --color=auto"
+	alias grep="grep --color=auto"
+elif [ $PLATFORM "==" "Darwin" ]; then
+	alias ls="ls -G"
+fi
+
+alias tar="tar --exclude=.git"
+alias ll="ls -alh"
+
+# custom commands
+alias config_update="cd ~/config && git pull --rebase origin master"
