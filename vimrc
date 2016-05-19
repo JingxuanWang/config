@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Plugin 'gmarik/vundle'
 
 " My Bundles here:
@@ -75,8 +75,8 @@ syntax on
 " filetype go
 au BufRead,BufNewFile *.go set filetype=go
 au BufReadPost *.ep set syntax=html
-au BufReadPost *.mi set syntax=perl
-au BufReadPost *.m  set syntax=perl
+au BufReadPost *.mi set syntax=mason
+au BufReadPost *.m  set syntax=mason
 
 " map double tab to omnifunc completion
 "imap qq <c-p>
@@ -122,7 +122,7 @@ autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 "|<c-x>s|     - Spelling suggestions."
 
 " Taglist Settings
-"let Tlist_Auto_Open = 1 
+"let Tlist_Auto_Open = 1
 "let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Exit_OnlyWindow = 1
 
@@ -146,8 +146,8 @@ if has("cscope")
     set csto=1
     set cst
     set nocsverb
-    
-    " add any database in current directory 
+
+    " add any database in current directory
     if filereadable("cscope.out")
         cs add cscope.out
     endif
