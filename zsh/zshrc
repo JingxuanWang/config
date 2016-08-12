@@ -12,7 +12,7 @@ autoload -U colors && colors
 
 # prompt setttings
 setopt prompt_subst
-. ~/config/git-prompt.sh
+. ~/config/git/git-prompt.sh
 PS1='[%*]%{$fg[cyan]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%} %{$fg[red]%}$(__git_ps1 "(%s)")%{$reset_color%}\$ '
 RPROMPT="[%{$fg_no_bold[yellow]%}%/%{$reset_color%}]"
 

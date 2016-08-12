@@ -33,7 +33,7 @@ Plugin 'bufexplorer.zip'
 call vundle#end()             " required
 filetype plugin indent on     " required
 
-
+set shell=/bin/zsh
 set nu
 set autoindent
 set expandtab
@@ -157,21 +157,21 @@ endif
 
 " CScope Quick Commands
 " Find Symbols
-map <c-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+"map <c-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 " Find Defination
-map <c-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+"map <c-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 " Find function calls from this function
-map <c-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+"map <c-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
 " Find functions that called current function
-map <c-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+"map <c-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 " Find specific string
-map <c-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+"map <c-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
 " Find specific pattern
-map <c-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+"map <c-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
 " Find and open file
-map <c-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+"map <c-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 " Find files that included current file
-map <c-\>i :cs find i ^<C-R>=expand("<cfile>")<CR><CR>
+"map <c-\>i :cs find i ^<C-R>=expand("<cfile>")<CR><CR>
 
 " nerttree
 "map <C-n> :NERDTreeToggle<cr>
