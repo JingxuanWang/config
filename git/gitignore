@@ -1,3 +1,5 @@
 *.iml
 *.swp
 .DS_Store
+build
+out
