@@ -31,3 +31,8 @@ if [ $PLATFORM "==" "Darwin" ]; then
 	# To Solve ppc compile problem
 	export ARCHFLAGS="-arch x86_64"
 fi
+
+# use tmux by default if sshed from remote
+if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
+  tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi
